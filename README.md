@@ -1,41 +1,52 @@
 # Movie Recommendation Application
 
 Welcome to the Movie Recommendation Application! This application provides recommendations for movies based on user preferences.
+## Setup
 
-## Installation
+### 1. Clone the repo
+```bash
+git clone https://github.com/HassanAiolio/ProjectST4
+cd ProjectST4
+```
 
-To get started, follow these steps:
+### 2. Install dependencies
+```bash
+cd frontend && npm install
+cd ../backend && npm install
+```
 
-1. Clone this repository to your local machine.
-2. Navigate to the `frontend` folder and execute `npm install` to install the necessary dependencies for the frontend.
-3. Navigate to the `backend` folder and execute `npm install` to install the necessary dependencies for the backend.
-4. Create a `.env` file in both the `frontend` and `backend` folders.
-5. Copy the values from `.env.example` in each folder to the corresponding `.env` file and adjust them as needed.
+### 3. Configure environment variables
 
-## Running the Application
+In `backend/`, create a `.env` file file based on `.env.example`.
 
-After completing the installation steps, you can run the application by following these instructions:
+In `frontend/`, create a `.env` file based on `.env.example`.
 
-### Backend
+### 4. Seed the database
+```bash
+cd backend
+node -r dotenv/config seedMovies.js
+```
+This fetches movies and populates the database. Wait for it to complete before running the app.
 
-1. Navigate to the `backend` folder.
-2. Execute `npm run dev` to start the backend server.
-3. The backend server will start running on `http://localhost:8000`.
+### 5. Install NLP language package
+```bash
+cd backend
+npm install @nlpjs/lang-en
+```
 
-### Frontend
+## Running the App
 
-1. Navigate to the `frontend` folder.
-2. Execute `npm run dev` to start the development server for the frontend.
-3. Open your web browser and go to `http://localhost:3000` to view the application.
+In one terminal:
+```bash
+cd backend && npm run dev
+```
 
-### Seeding the DataBase:
+In another terminal:
+```bash
+cd frontend && npm run dev
+```
 
-```node -r dotenv/config seedMovies.js```
-
-
-
-### Install the English language package for the NLP.js library 
-```npm install @nlpjs/lang-en```
+Then open http://localhost:3000
 
 ## Usage
 
