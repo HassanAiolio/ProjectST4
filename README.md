@@ -1,4 +1,3 @@
-# ProjectST4
 # Movie Recommendation Application
 
 Welcome to the Movie Recommendation Application! This application provides recommendations for movies based on user preferences.
