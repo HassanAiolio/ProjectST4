@@ -30,7 +30,6 @@ appDataSource
     app.use('/auth', authRouter);
     app.use('/genres', genresRouter);
 
-
     // Register 404 middleware and error handler
     app.use(routeNotFoundJsonHandler); // this middleware must be registered after all routes to handle 404 correctly
     app.use(jsonErrorHandler); // this error handler must be registered after all middleware to catch all errors
